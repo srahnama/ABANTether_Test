@@ -9,10 +9,13 @@ This Django project implements a RESTful API for managing cryptocurrency orders.
     ```
     git clone https://github.com/your-username/ABANTether_Test.git
     ```
+
 2. Navigate to the project directory:
+
     ```
     cd ABANTether_Test
     ```
+
 3. Create a virtual environment (optional but recommended):
     
     ```
@@ -20,21 +23,27 @@ This Django project implements a RESTful API for managing cryptocurrency orders.
     source env/bin/activate # Linux/macOS
     env\Scripts\activate # Windows
     ```
+
 4. Install the project dependencies:
+
     ```
     pip install -r requirements.txt
     ```
+
 5. Apply database migrations:
+
    ```
    python manage.py makemigrations
    python manage.py migrate
    ```
+
 7. Run the development server:
+
     ```
     python manage.py runserve
     ```
 
-9. The API will be accessible at `http://localhost:8000/api/`.
+8. The API will be accessible at `http://localhost:8000/api/`.
 
 ## API Endpoints
 
@@ -51,24 +60,23 @@ This Django project implements a RESTful API for managing cryptocurrency orders.
 - `price`: Price (float)
 
 Example:
-    ```
-    POST /api/orders/create/
 
+
+    POST /api/orders/create/
     {
     "order_id": "12345",
     "currency": "USDT",
     "amount": 10.0,
     "price": 50000.0
     }
-    ```
 
  To retrieve a list of existing orders, send a GET request to `/api/orders/list/`. This will return a JSON array containing the order details.
 
 Example:
 
-    ```
+    
     GET /api/orders/list/
-    ```
+    
 
 
 This will run the test cases defined in the `orders/tests.py` module.
